@@ -1,0 +1,49 @@
+using System;
+using System.Globalization;
+namespace projeto2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, y, quant;
+            int min = 0;
+            int max = 0;
+            int total = 0;
+
+            Console.WriteLine("digite o nuemro de testes");
+            quant = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < quant; i++)
+            {
+                Console.WriteLine("digite x");
+                x = int.Parse(Console.ReadLine());
+                Console.WriteLine("digite y");
+                y = int.Parse(Console.ReadLine());
+
+                if (x > y)
+                {
+                    x = max;
+                    y = min;
+
+                }
+                else
+                {
+                    y = max;
+                    x = min;
+
+                }
+
+                for (int j = min; j == max; j++)
+                {
+                    if (j % 2 != 0)
+                    {
+                        total = j + total;
+                    }
+
+                    Console.WriteLine("o total é " + total);
+                }
+                Console.WriteLine("o total é parte 2" + total);
+            }
+
+          
